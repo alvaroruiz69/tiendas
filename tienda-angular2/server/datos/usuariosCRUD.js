@@ -1,29 +1,38 @@
+// JavaScript Document
 
 var Usuario = require('./usuarioModel.js');
 module.exports.insertarUsuario = function (callback) {
-	let User1 = new Usuario({nombre: "Nombre de usuario 1", email: 'roca@alvaroruiz.cl', password:'1234567'});
+	let User1 = new Usuario({
+		nombre: "Nombre de usuario 1",
+		email: 'roca@alvaroruiz.cl',
+		password: '1234567'
+	});
 
 	User1.save((error) => {
-		if(error) callback(error);
-		callback(null,"Usuario nuevo guardado");
+		if (error) callback(error);
+		callback(null, "Usuario nuevo guardado");
 	});
 };
 
 module.exports.eliminarUsuario = function (callback) {
-	Usuario.remove({email: 'roca@alvaroruiz.cl'}, (error) => {
-		if(error) callback(error);
-		callback(null,"Registro del usuario eliminado");
+	Usuario.remove({
+		email: 'roca@alvaroruiz.cl'
+	}, (error) => {
+		if (error) callback(error);
+		callback(null, "Registro del usuario eliminado");
 	});
 };
 
 module.exports.consultarUsuario = function (data, callback) {
-	Usuario.findOne({email: data.email}, (err, user) => {
-		if(user){
-			if(user.password === data.password)
-				callback(null,user);
-      		else
-      			callback('Contraseña incorrecta');
-      	} else
+	Usuario.findOne({
+		email: data.email
+	}, (err, user) => {
+		if (user) {
+			if (user.password === data.password)
+				callback(null, user);
+			else
+				callback('Contraseña incorrecta');
+		} else
 			callback('Usuario no existe');
 	});
 };

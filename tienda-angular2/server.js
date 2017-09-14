@@ -1,4 +1,4 @@
-
+// JavaScript Document
 var bodyParser = require('body-parser'),
 	http = require('http'),
 	path = require('path'),
