@@ -5,7 +5,7 @@ module.exports.insertarUsuario = function (callback) {
 	let User1 = new Usuario({
 		nombre: "Nombre de usuario 1",
 		email: 'roca@alvaroruiz.cl',
-		password: '1234567'
+		password: '123456'
 	});
 
 	User1.save((error) => {

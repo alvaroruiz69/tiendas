@@ -1,14 +1,14 @@
-import { TiendaAngular2Page } from './app.po';
+import { AppPage } from './app.po';
 
-describe('tienda-angular2 App', function() {
-  let page: TiendaAngular2Page;
+describe('tienda-angular2 App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new TiendaAngular2Page();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('t works!');
+    expect(page.getParagraphText()).toEqual('Welcome to t!');
   });
 });
