@@ -30,7 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## insert datos BD
 1. node server/iniciarData.js 
+## compila SPA
+2. ng build && 
 ## inicia SPA
-2. ng build && node server.js
+3. node server.js
 ## navega el puerto:
-3. Navegar en la URL: localhost:3000
+4. Navegar en la URL: localhost:3000

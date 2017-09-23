@@ -3,10 +3,8 @@
 
 let path = require('path');
 let webpack = require('webpack');
-
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
-
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
